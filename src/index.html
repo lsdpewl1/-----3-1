@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вклады</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="form-group">
+        <label for="depositType">Вид вклада:</label>
+        <select id="depositType">
+            <option value="Пополняемый">Пополняемый</option>
+            <option value="Срочный">Срочный</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="depositTerm">Срок вклада:</label>
+        <select id="depositTerm"></select>
+    </div>
+
+    <div class="form-group">
+        <label for="depositAmount">Сумма вклада:</label>
+        <input type="number" id="depositAmount" min="1" oninput="validateInput()" required>
+    </div>
+
+    <button id="calculateButton" onclick="calculate()" disabled>Рассчитать</button>
+
+    <div class="result" id="result"></div>
+
+    <script src = "bundle.js">
+    </script>
+</body>
+</html>
